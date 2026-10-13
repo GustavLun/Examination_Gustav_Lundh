@@ -18,6 +18,7 @@ def test_remove_book_from_favorites():
 
     book = store.addBook("chaplin", "runaway")
 
+    favorites.add(book)
     favorites.remove(book)
 
     assert book not in favorites.Favorites

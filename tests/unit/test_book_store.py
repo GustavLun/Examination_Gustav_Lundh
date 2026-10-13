@@ -1,7 +1,8 @@
 import pytest
-from src.book_store import Book
+
 from src.book_store import BookStore
-from src.fav_books import FavoriteBooks
+from unittest.mock import Mock
+
 
 
 def test_add_book():
@@ -27,8 +28,10 @@ def test_add_book_id():
 
 
 def test_togglefavorite_adds_book_to_favorites():
-    store = BookStore()
+    fake_favorites = Mock()
+    fake_favorites.Favorites = [ ]
+    store = BookStore(fake_favorites)
     book = store.addBook( "Chaplin", "Runway")
 
     store.toggle_favorite(book.id)
-    assert book in store.favorites.Favorites
+    fake_favorites.add.assert_called_once_with(book)
