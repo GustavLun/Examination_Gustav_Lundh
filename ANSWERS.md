@@ -1,65 +1,3 @@
-# Testprojekt – Inlämningsuppgift
-
-## Checklista
-
-### 1. Projekt och GitHub
-- [x] Skapa projektet enligt kursens instruktioner
-- [x] Initiera Git
-- [x] Ladda upp projektet till ett publikt GitHub-repository
-- [x] Skapa `README.md`, `STORIES.md` och `ANSWERS.md` i projektets rotmapp
-
-### 2. Backend och testning
-- [ ] Implementera backend-kod med TDD
-- [ ] Skriva enhetstester
-- [ ] Skriva integrationstester
-- [ ] Verifiera att testerna fungerar
-
-### 3. User stories och BDD
-- [ ] Dokumentera user stories för befintlig funktionalitet i `STORIES.md`
-- [ ] Skapa feature-filer utifrån user stories
-- [ ] Skapa step-filer för samtliga features
-- [ ] Skapa page-filer vid behov
-
-### 4. CI – GitHub Actions
-- [ ] Konfigurera CI för projektet
-- [ ] Köra samtliga tester automatiskt vid push till `main`
-- [ ] Köra webbläsartester i headless-läge
-- [ ] Kontrollera att GitHub Actions-workflowen fungerar
-
-### 5. Dokumentation
-- [x] Besvara teorifrågorna i `ANSWERS.md`
-- [ ] Dokumentera vad som har testats i `README.md`
-- [ ] Dokumentera hur projektet installeras och startas i `README.md`
-
-### 6. Slutkontroll
-- [ ] Alla filer finns i projektets rotmapp
-- [ ] Alla tester körs utan fel
-- [ ] Alla ändringar är committade och pushade till GitHub
-- [ ] Repository är publikt
-- [ ] Projektet är redo för inlämning
-
----
-
-## Vad har testats?
-
-**Enhetstester:**
-
-Beskriv vilka enskilda funktioner eller klasser som testas.
-
-**Integrationstester:**
-
-Beskriv vilka delar av backend som testas tillsammans.
-
-**BDD/E2E-tester:**
-
-Beskriv vilka funktioner och användarflöden på webbsidan som testas.
-
-**CI:**
-
-Beskriv hur testerna körs automatiskt via GitHub Actions.
-
----
-
 ## Installera och starta projektet
 
 Beskriv hur projektet installeras och startas, inklusive eventuella beroenden och konfiguration
@@ -72,11 +10,16 @@ Beskriv hur projektet installeras och startas, inklusive eventuella beroenden oc
 ``Prestandatest`` här är målet med att testa prestandan på produkten. Här fokuserar testarna på att se till att produkten klarar av att driva sina funktioner utan att svarstiden är för lång, man simulerar olika typer av scenarios som skulle kunna ske i verkligeheten så som massivtflöde av användare, men det är också en naturlig del för att testa att saker och ting generellt fungerar utan noterbara förseningar under förväntade men även oväntade situationer.
 
 1. Beskriv hur det går till när man arbetar med TDD.
-- Svar:
+- Svar: Med test driven development så använder man sig av red green refactor metoden. Man utgår från user stories och acceptanskriterier när man börjar utforma tester som skall testa de funktioner produkten skall ha, dessa kallar man för testscenarios. Alla testscenarios kommer först att bli röda alltså "Faila" och det är därefter man måste skriva kod till dessa funktioner, detta gör man tills att testen blir gröna. När testen blivit gröna kan man omfaktorisera koden för att optimera den.
 
 1. Beskriv hur BDD skiljer sig från TDD.
-- Svar:
+- Svar: BDD använder verktyget Behave, som använder språket Gherkin för att beskriva hur en funktion förväntas fungera när en användare använder den. Gherkin är ett mer vardagligt språk som gör testerna enklare att förstå för både testare och utvecklare. BDD fokuserar på att beskriva systemets förväntade beteende ur användarens perspektiv, medan TDD fokuserar på att skriva tester före koden för att styra utvecklingen av funktionaliteten.
 
 1. Tänk dig att du skulle göra en webbsida som liknar Läslistan, både frontend och backend. Om du fick välja förutsättningslöst, vilka sorters tester skulle du vilja använda? Motivera ditt val.
-- Svar:
+- Svar: Jag skulle använda mig av fler olika typer av tester för att säkerställa att både frontend och backend funger som de ska.
+- ``Enhetstester`` skulle jag använda för att säkerställa att individuella funktioner på hemsidan fungerar som de ska tex, att lägga till eller ta bort böcker från läslistan.
+- ``Integrationstester`` skulle jag använda för att testa så att backend funktioner samspelar som förväntat tex, att en bok kan sparas och sedan hämtas från databasen.
+- ``BDD / E2E`` tester skulle jag använda för att hela användarflödet tex, att användaren lägger till en bok och att den visas korrekt på sidan.
+- ``Regressionstester`` skulle användas för att kontrollera att befintlig funtkionalitet fungerar som de ska efter att ny kod implementerats. 
+- ``Prestandstester`` Skulle jag använda för att testa sidans svarstid, hur många användare den kan klara av men även hur den klarar av samt hur sidan påverkas av att få större mängder böcker tillagda.
 
