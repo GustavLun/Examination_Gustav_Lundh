@@ -9,8 +9,8 @@
 - [x] Skapa `README.md`, `STORIES.md` och `ANSWERS.md` i projektets rotmapp
 
 ### 2. Backend och testning
-- [ ] Implementera backend-kod med TDD
-- [ ] Skriva enhetstester
+- [x] Implementera backend-kod med TDD
+- [x] Skriva enhetstester
 - [ ] Skriva integrationstester
 - [ ] Verifiera att testerna fungerar
 
