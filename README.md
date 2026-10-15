@@ -16,9 +16,9 @@
 
 ### 3. User stories och BDD
 - [x] Dokumentera user stories för befintlig funktionalitet i `STORIES.md`
-- [ ] Skapa feature-filer utifrån user stories
-- [ ] Skapa step-filer för samtliga features
-- [ ] Skapa page-filer vid behov
+- [x] Skapa feature-filer utifrån user stories
+- [x] Skapa step-filer för samtliga features
+- [x] Skapa page-filer vid behov
 
 ### 4. CI – GitHub Actions
 - [ ] Konfigurera CI för projektet

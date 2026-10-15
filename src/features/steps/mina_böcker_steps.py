@@ -1,28 +1,25 @@
+import re
 from behave import when, then, given
 from playwright.sync_api import expect
 from behave.api.pending_step import StepNotImplementedError
 
+from src.features.steps.katalog_steps import SELECTED
+
 BOOK_TITLE = "Ormar på ett plan: En Python-berättelse"
+SELECTED = re.compile(r"\bselected\b")
 
-@given(u'att jag har favoritmarkerat en bok')
-def step_impl(context):
-    context.page.get_by_text(BOOK_TITLE).click(but)
 
-@when(u'jag öppnar Mina böcker')
+@when(u'jag öppnar mina böcker')
 def step_impl(context):
     context.page.get_by_test_id("favorites").click()
 
 
 @then(u'ska boken finnas i Mina böcker')
 def step_impl(context):
-    expect.contains(BOOK_TITLE)
+    expect(context.page.get_by_text(context.book_title)).to_be_visible()
 
-
-@when(u'jag öppnar mina böcker')
-def step_impl(context):
-    raise StepNotImplementedError(u'When jag öppnar mina böcker')
 
 
 @then(u'ska information om att listan är tom visas')
 def step_impl(context):
-    raise StepNotImplementedError(u'Then ska information om att listan är tom visas')
+    expect(context.page.get_by_text(" När du valt, kommer dina favoritböcker att visas här. ")).to_be_visible()

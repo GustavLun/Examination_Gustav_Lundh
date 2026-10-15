@@ -25,12 +25,3 @@ Som användare vill jag kunna trycka på "Mina böcker" för att se böcker som 
 ### Story 2: Inga böcker i mina böcker listan
 Som användare vill jag få information när jag inte har favoritmarkerat några böcker
 så att jag förstår att böcker visas i Mina böcker när jag har valt dem.
-
-## Statistik
-
-### Story 1: Antal böcker i katalog
-Som användare vill jag kunna öppna statistik för att kunna se information om hur många böcker det finns i katalogen så att vet hur många böcker som finns tillgängliga.
-
-### Story 2: Se antal favoritmarkerade böcker
-Som användare vill jag i Statistik se hur många böcker som har favoritmarkerats
-så att jag vet hur populära böckerna är.

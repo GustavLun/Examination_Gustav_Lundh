@@ -2,12 +2,13 @@
 Feature: Mina böcker
   som användare vill jag kunna trycka på mina böcker så att jag ser de böcker jag favoritmarkerat
 
-  Background: given att jag öppnat läslistan
+  Background:
+  Given att jag har öppnat läslistan
 
   @story1
   Scenario: Favoritmarkerad bok visas i Mina böcker
     Given att jag favoritmarkerat en bok
-    When jag öppnar Mina böcker
+    When jag öppnar mina böcker
     Then ska boken finnas i Mina böcker
 
   @story2
