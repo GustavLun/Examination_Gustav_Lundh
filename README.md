@@ -11,11 +11,11 @@
 ### 2. Backend och testning
 - [x] Implementera backend-kod med TDD
 - [x] Skriva enhetstester
-- [ ] Skriva integrationstester
-- [ ] Verifiera att testerna fungerar
+- [x] Skriva integrationstester
+- [x] Verifiera att testerna fungerar
 
 ### 3. User stories och BDD
-- [ ] Dokumentera user stories för befintlig funktionalitet i `STORIES.md`
+- [x] Dokumentera user stories för befintlig funktionalitet i `STORIES.md`
 - [ ] Skapa feature-filer utifrån user stories
 - [ ] Skapa step-filer för samtliga features
 - [ ] Skapa page-filer vid behov
