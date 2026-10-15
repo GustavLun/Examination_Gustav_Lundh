@@ -4,7 +4,8 @@ from src.book_store import BookStore
 from unittest.mock import Mock
 
 
-
+@pytest.mark.unit
+@pytest.mark.unit_book_store
 def test_add_book():
     store = BookStore()
 
@@ -15,7 +16,8 @@ def test_add_book():
     assert book.id == 1
     assert book.title == "Runway"
 
-
+@pytest.mark.unit
+@pytest.mark.unit_book_store
 def test_add_book_id():
     store = BookStore()
 
@@ -26,7 +28,8 @@ def test_add_book_id():
     assert book2 in store.book_list
     assert book2.id == 2
 
-
+@pytest.mark.unit
+@pytest.mark.unit_book_store
 def test_togglefavorite_adds_book_to_favorites():
     fake_favorites = Mock()
     fake_favorites.Favorites = [ ]

@@ -1,22 +1,27 @@
-from src.book_store import Book
-from src.book_store import BookStore
+import pytest
+from unittest.mock import Mock
 from src.fav_books import FavoriteBooks
 
+@pytest.mark.unit
+@pytest.mark.unit_fav_books
 def test_add_book_to_favorites():
     favorites = FavoriteBooks()
-    store = BookStore()
+    fake_bookstore = Mock()
 
-    book = store.addBook("chaplin", "runaway")
+    book = fake_bookstore.addBook("chaplin", "runaway")
 
     favorites.add(book)
 
     assert book in favorites.Favorites
 
+
+@pytest.mark.unit
+@pytest.mark.unit_fav_books
 def test_remove_book_from_favorites():
     favorites = FavoriteBooks()
-    store = BookStore()
+    fake_bookstore = Mock()
 
-    book = store.addBook("chaplin", "runaway")
+    book = fake_bookstore.addBook("chaplin", "runaway")
 
     favorites.add(book)
     favorites.remove(book)
