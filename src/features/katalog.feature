@@ -1,6 +1,7 @@
 @katalog
 Feature: katalog
 som användare vill jag kunna se en lista med alla tillgängliga böcker så att jag vet vad jag kan läsa
+
   Background:
     Given att jag har öppnat läslistan
 
