@@ -49,7 +49,7 @@
    python -m venv .venv
    .venv\Scripts\activate
 ```
-Funkar inte commandot, skapa en virituell interpreter manuellt, målet är att det skall stå följande i terminalen 
+Funkar inte kommandot, skapa en virituell interpreter manuellt, målet är att det skall stå följande i terminalen 
 ![img.png](img.png)
 
 2. Starta med att installera obligatoriska paket som finns noterade i requirements, snabbaste lösning på detta är att skriva ``pip install -r requirements.txt``
