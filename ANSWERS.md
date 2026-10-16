@@ -1,6 +1,3 @@
-## Installera och starta projektet
-
-Beskriv hur projektet installeras och startas, inklusive eventuella beroenden och konfiguration
 # Teorifrågor
 ### Dessutom ska du svara kortfattat på följande frågor i ANSWERS.md för att demonstrera dina kunskaper.
 1. Vad är skillnaden mellan enhetstest, integrationstest, regressionstest och prestandatest?

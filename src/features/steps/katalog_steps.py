@@ -8,7 +8,7 @@ SELECTED = re.compile(r"\bselected\b")
 
 @when(u'jag trycker på katalog')
 def step_impl(context):
-    context.page.get_by_test_id("catalog")
+    context.page.get_by_test_id("catalog") # Click skippas då det är det första syns på sidan vilket täck äav common steps.
 
 
 
